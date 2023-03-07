@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <style>
+    .header {
+	padding: 60px;
+	text-align: center;
+	background: #1abc9c;
+	color: white;
+	font-size: 30px;
+	
+    }
+    .column_nav {
+	float: left;
+	width: 20%;
+    }
+    .column {
+	float: left;
+	width: 80%;
+	font-family: Arial, Helvetica, sans-serif;\
+	font-size: 34pt;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+	content: "";
+	display: table;
+	clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+    @media screen and (max-width: 600px) {
+	.column {
+	    width: 100%;
+	}
+	.column_nav {
+	    width: 100%;
+	}
+    }
+  </style>
+  
+  <head>
+    <meta charset="utf-8">
+    <!--<title>{{ site.title }}</title>-->
+  </head>
+  <body>
+    <script>
+      function toggle(x) {
+	  x.classList.toggle("change");
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+</header>
+<div class="header", id="nav-header">
+  <h1 class="project-name">{{ site.title }}</h1>
+  <h2 class="project-tagline">{{ site.tagline }}</h2>
+  <h3 class="project-date">{{ site.date }}</h3>
+  <h4 class="project-location">{{ site.loc }}</h4>
+</div> 
+<div class="row">
+  <div class="column_nav">
+    {% capture nav_include %}{% include nav.md %}{% endcapture %}
+    {{ nav_include | markdownify }}
+  </div>
+  <div class="column">
+    <main id="main-content" class="main-content" role="main">
+      {{ content | markdownify }}
+    </main>
+  </div>
+</div>
+</body>
+</html>
