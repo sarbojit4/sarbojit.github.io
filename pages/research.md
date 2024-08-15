@@ -10,4 +10,4 @@ My current research interest is verification of concurrent programs, more specif
 
 2. Abdulla, P.A., Atig, M.F., **Das, S.**, Jonsson, B., Sagonas, K.: Parsimonious optimal dynamic partial order reduction. In: Computer Aided Verification, CAV (2024)
 
-3. Abdulla, P.A., Atig, M.F., Das, S., Jonsson, B., Sagonas, K.: Trading space for simplicity in stateless model checking. Real Time and Such (2024)
+3. Abdulla, P.A., Atig, M.F., **Das, S**., Jonsson, B., Sagonas, K.: Trading space for simplicity in stateless model checking. Real Time and Such (2024)
